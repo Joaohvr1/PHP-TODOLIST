@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+
+nav{
+    background: #e8373d85;
+}
+
+
+
+.nav-item > a {
+    color: #ffffff; /* Cor desejada */
+}
+
+.nav-item .nav-link.active{
+    color: #d4f1ee;
+}
+
+.nav-link:hover,
+a:hover{
+    color: #bbe2de;
+}

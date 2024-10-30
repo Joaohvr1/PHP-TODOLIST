@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    background: rgb(9,12,14);
+    background: linear-gradient(90deg, rgba(9, 12, 14, 0.5) 0%, rgba(9,9,121,1) 51%, rgba(5,6,7,1) 100%);
+
+}
+
+.container__main{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    width: 1000px;
+    height: 650px;
+    border-radius: 15px;
+    margin: 8rem auto;
+
+  
+    background-image: url("../assets/login1.jpg");
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container__content{
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+    height: 650px;
+    
+}
+
+
+
+.container__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    background-color: rgba(0, 0, 0, 0.603);
+    width: 50%;
+    height: 100%;
+    color: rgba(255, 255, 255, 0.712);
+    border-right: 1px;
+    border-radius: 15px;
+
+}
+
+#formCadastro > p{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#formCadastro{
+    margin-top: -5rem;
+}
+
+#username, #password{
+    width: 350px;
+
+}
+
+#formCadastro h1{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding-top: -2rem;
+}
+
+.container__image{
+    display: flex;
+    flex-direction: column;
+    justify-content: space;
+    width: 50%;
+    height: 100%;
+    margin-top: 5rem;
+    color: white;
+    text-align: center;
+
+}
+
+.container__image h2{
+    font-size: 25px;
+}
+
+p{
+    color: rgba(255, 255, 255, 0.712);
+
+}
+a{
+    color: white;
+}
+
+
+.container__message{
+    margin-top: 1rem;
+    width: 400px;
+    height: 2px;
+
+}
+
+.btn{
+    background-color: #5315a3;
+    color: white;
+    width: 150px;
+    margin-top: 5px;
+    margin-left: 12rem;
+}
+
+
+
+
