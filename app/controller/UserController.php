@@ -76,8 +76,9 @@ class UserController {
                     $message = "Login efetuado com sucesso";
                     $alertType = "success";
                     $_SESSION['usuario_logado'] = $user;
-
-                    header("location: index.php?url=home" );
+                    
+                    header("location: index.php?url=home");
+                    exit();
                 } else {
                     $message = "Usuário ou senha incorreta.";
                     $alertType = "danger";
@@ -88,4 +89,3 @@ class UserController {
         include "./app/view/Login.php";
     }
 }
-?>

@@ -18,12 +18,15 @@ switch ($url) {
     case 'home':
         session_start();
         if (!isset($_SESSION['usuario_logado'])) {
-            header("Location: login.php");
+            $_SESSION['message'] = "Por favor, faça login para acessar o sistema.";
+            $_SESSION['alertType'] = "danger";
+            header("Location: index.php?url=login"); 
             exit();
         }
         $controller = new HomeController();
         $controller->index();
         break;
+        
 
     default:
         $controller = new UserController();
@@ -31,4 +34,3 @@ switch ($url) {
         break;
 
 }
-?>

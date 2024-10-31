@@ -1,46 +1,39 @@
-const validaForm = () => {
-    document.addEventListener("DOMContentLoaded", () => {
-        const form = document.getElementById("formCadastro");
-        const formBotao = document.getElementById("formBotao");
+document.addEventListener("DOMContentLoaded", () => {
+        const iconHome = documentQuerySelector(".icon-home");
 
-        form.addEventListener("input", () => {
-            let isValid = true;
-            let message = "";
+        iconHome.addEventListener("mouseover", () => {
+            document.querySelector(".icon-home").src = "./public/assets/home1-black.svg";
+        });
+    
+        iconHome.addEventListener("mouseout", () => {
+            document.querySelector(".icon-home").src = "./public/assets/home1-white.svg";
+        });
+    });
+    
+document.addEventListener("DOMContentLoaded", () => {
+    const iconLinks = document.querySelectorAll(".icon-home");
 
-            const nome = document.getElementById("nome").value.trim();
-            const username = document.getElementById("username").value.trim();
-            const password = document.getElementById("password").value.trim();
-            const email = document.getElementById("email").value.trim();
+    iconLinks.forEach(link => {
+        const img = link.querySelector("img"); 
 
-            if (!nome) {
-                isValid = false;
-                message += "Nome é obrigatório.\n";
+        link.addEventListener("mouseover", () => {
+            if (img.alt === "HOME") {
+                img.src = "./public/assets/home1-black.svg";
+            } else if (img.alt === "notepad") {
+                img.src = "./public/assets/notepad-black.svg"; 
+            } else if (img.alt === "config") {
+                img.src = "./public/assets/config-black.svg"; 
             }
-            if (!username) {
-                isValid = false;
-                message += "Nome de usuário é obrigatório.\n";
-            }
-            if (!password) {
-                isValid = false;
-                message += "Senha é obrigatória.\n";
-            }
-            if (!email || !validateEmail(email)) {
-                isValid = false;
-                message += "Email inválido.\n";
-            }
+        });
 
-            formBotao.disabled = !isValid;
-
-            if (message) {
-                alert(message);
+        link.addEventListener("mouseout", () => {
+            if (img.alt === "HOME") {
+                img.src = "./public/assets/home1-white.svg";
+            } else if (img.alt === "notepad") {
+                img.src = "./public/assets/notepad-white.svg"; 
+            } else if (img.alt === "config") {
+                img.src = "./public/assets/config-white.svg"; 
             }
         });
     });
-}
-
-function validateEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
-    return re.test(String(email).toLowerCase());
-}
-
-validaForm();
+});
